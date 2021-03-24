@@ -14,7 +14,8 @@ In this challenge, it focus on:
 - Novelty of idea
 - Code quality
 - Overall execution (including accessibility)
-![More detail about the challenge.](https://android-developers.googleblog.com/2021/03/android-dev-challenge-4.html)
+
+[More detail about the challenge.]
 
 The main challenge that I faced is write unit test. There are not many resources available. 
 
@@ -23,7 +24,7 @@ The main challenge that I faced is write unit test. There are not many resources
 
 
 Here is demo video:
-![demo_video](https://user-images.githubusercontent.com/6526127/112253343-8b647b80-8c2c-11eb-9d3c-35c876d410b2.mp4)
+[demo_video]
 
 
 ## :wheelchair: Accessibility
@@ -33,13 +34,17 @@ For accessibility, I tested with google accessibility scanner to make sure no su
 
 To make it easier for user to use talkback, I merged the contents wherever possible and provide custom content description.
 
-
-![accessibility video](https://user-images.githubusercontent.com/6526127/112253453-bea70a80-8c2c-11eb-8665-e90686dda15e.mp4)
+[accessibility video]
 
 ## Testing Compose layout
 
 I wrote two basic compose layout test, CurrentWeatherCardTest and FiveDayListTest under androidTest package.
 
+## Credits
+
+This app inspired from [Weather App Freebie] concept Designed by [Raman Yv]
+
+Lottie file are downloaded from [Jochang]
 ## License
 ```
 Copyright 2020 The Android Open Source Project
@@ -56,3 +61,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+[Jochang]: https://lottiefiles.com/user/26177
+[accessibility video]: https://user-images.githubusercontent.com/6526127/112253453-bea70a80-8c2c-11eb-8665-e90686dda15e.mp4
+[demo_video]: https://user-images.githubusercontent.com/6526127/112253343-8b647b80-8c2c-11eb-9d3c-35c876d410b2.mp4
+[More detail about the challenge.]: https://android-developers.googleblog.com/2021/03/android-dev-challenge-4.html
