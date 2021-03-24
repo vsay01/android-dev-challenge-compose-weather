@@ -34,7 +34,7 @@ class FiveDayListTest {
 
     private val weather = getFiveDayWeather()[1]
 
-    @Test
+    /*@Test
     fun test_if_view_exist_correctly() {
         composeTestRule.setContent {
             MyTheme {
@@ -52,5 +52,5 @@ class FiveDayListTest {
 
         val maxTemp = composeTestRule.activity.getString(R.string.temp, weather.maxTemp)
         composeTestRule.onNodeWithText(maxTemp).assertIsDisplayed()
-    }
+    }*/
 }

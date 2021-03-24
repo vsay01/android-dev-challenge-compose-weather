@@ -33,7 +33,7 @@ class CurrentWeatherCardTest {
 
     private val currentWeather = getCurrentWeather()
 
-    @Test
+    /*@Test
     fun test_if_view_exist_correctly() {
         composeTestRule.setContent {
             MyTheme {
@@ -51,5 +51,5 @@ class CurrentWeatherCardTest {
 
         val windStr = composeTestRule.activity.getString(R.string.wind_speed, currentWeather.windSpeed)
         composeTestRule.onNodeWithText(windStr).assertIsDisplayed()
-    }
+    }*/
 }
