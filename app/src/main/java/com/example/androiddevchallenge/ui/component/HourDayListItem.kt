@@ -30,6 +30,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
@@ -40,12 +42,22 @@ import com.example.androiddevchallenge.util.getWeatherLottie
 
 @Composable
 fun HourDayListItem(hourlyWeather: HourlyWeather) {
+    val a11yLabel = String.format(
+        stringResource(R.string.hourly_temp_a11y),
+        hourlyWeather.hour,
+        hourlyWeather.description,
+        hourlyWeather.temp
+    )
     Row {
         Spacer(modifier = Modifier.width(16.dp))
         Column(
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.padding(end = 16.dp)
+            modifier = Modifier
+                .padding(end = 16.dp)
+                .semantics(mergeDescendants = true) {
+                    this[SemanticsProperties.ContentDescription] = a11yLabel
+                }
         ) {
             Text(
                 text = hourlyWeather.hour,

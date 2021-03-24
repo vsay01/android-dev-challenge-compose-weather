@@ -32,6 +32,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
 import com.example.androiddevchallenge.model.CurrentWeather
@@ -41,10 +43,20 @@ import com.example.androiddevchallenge.util.getWeatherLottie
 
 @Composable
 fun CurrentWeatherCard(currentWeather: CurrentWeather) {
+    val a11yCurrentCard = String.format(
+        stringResource(R.string.current_card_a11y),
+        currentWeather.temp,
+        currentWeather.description,
+        currentWeather.humidity,
+        currentWeather.windSpeed
+    )
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp),
+            .padding(16.dp)
+            .semantics(mergeDescendants = true) {
+                this[SemanticsProperties.ContentDescription] = a11yCurrentCard
+            },
         shape = shapes.medium,
         color = Color(currentWeather.color)
     ) {

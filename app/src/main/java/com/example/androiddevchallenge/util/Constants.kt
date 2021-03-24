@@ -28,8 +28,8 @@ object Constants {
 
     val WEATHER_COLOR = arrayOf(
         0xFF5f5be7,
-        0xFF55cc8c,
+        0xFF1f6841,
         0xFFeb378e,
-        0xFFf4b13e
+        0xFFa96f0a
     )
 }

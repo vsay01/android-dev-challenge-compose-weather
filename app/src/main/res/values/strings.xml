@@ -9,7 +9,7 @@
       or implied. See the License for the specific language governing permissions and limitations under
       the License.
       -->
-    <string name="app_name">AndroidDevChallenge</string>
+    <string name="app_name">MiniWeather</string>
     <string name="next_4_days_label">Next 4 days/hourly</string>
     <string name="temp">%1$dᵒ</string>
     <string name="humidity">Humidity %1$d%%</string>
@@ -18,4 +18,7 @@
 
     <string name="min_temp_a11y">Minimum temperature can be %1$d Degree</string>
     <string name="max_temp_a11y">Maximum temperature can be %1$d Degree</string>
+    <string name="hourly_temp_a11y">At %1$s, it has %2$s. The temperature is %3$d degree</string>
+    <string name="current_card_a11y">Currently, it\'s %1$d degree. %2$s. The humidity is %3$d percent and wind speed is %4$d km/hr.</string>
+    <string name="five_day_a11y">On %1$s, it\'s %2$d degree. %3$s.</string>
 </resources>

@@ -34,6 +34,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.R
@@ -46,13 +48,22 @@ import com.example.androiddevchallenge.util.getWeatherLottie
 
 @Composable
 fun FiveDayListItem(weather: CurrentWeather) {
+    val a11yFiveDayCard = String.format(
+        stringResource(R.string.five_day_a11y),
+        DAYS_OF_WEEK[weather.day],
+        weather.temp,
+        weather.description
+    )
     Surface(
         shape = shapes.medium,
         color = Color(weather.color),
         modifier = Modifier
-            .height(200.dp)
+            .height(208.dp)
             .width(140.dp)
             .padding(10.dp)
+            .semantics(mergeDescendants = true) {
+                this[SemanticsProperties.ContentDescription] = a11yFiveDayCard
+            }
     ) {
         Column(
             verticalArrangement = Arrangement.Center,
@@ -67,7 +78,7 @@ fun FiveDayListItem(weather: CurrentWeather) {
             LottieLoader(
                 modifier = Modifier
                     .size(44.dp)
-                    .padding(bottom = 8.dp, top = 8.dp),
+                    .padding(bottom = 16.dp, top = 8.dp),
                 resId = getWeatherLottie(weather.weatherCode)
             )
             Text(

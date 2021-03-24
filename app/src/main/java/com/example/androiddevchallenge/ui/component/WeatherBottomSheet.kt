@@ -38,6 +38,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.SemanticsProperties
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -51,10 +53,20 @@ import com.example.androiddevchallenge.util.getWeatherLottie
 
 @Composable
 fun WeatherBottomSheetContent(selectedWeather: CurrentWeather) {
+    val a11yBottomSheetCard = String.format(
+        stringResource(R.string.five_day_a11y),
+        Constants.DAYS_OF_WEEK[selectedWeather.day],
+        selectedWeather.temp,
+        selectedWeather.description
+    )
     Surface(
         shape = shapes.medium,
         color = Color(selectedWeather.color),
-        modifier = Modifier.fillMaxHeight(0.85f)
+        modifier = Modifier
+            .fillMaxHeight(0.85f)
+            .semantics(mergeDescendants = true) {
+                this[SemanticsProperties.ContentDescription] = a11yBottomSheetCard
+            }
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
@@ -99,7 +111,10 @@ fun WeatherBottomSheetContent(selectedWeather: CurrentWeather) {
                         )
                     )
                     Text(
-                        text = String.format(stringResource(R.string.temp), selectedWeather.minTemp),
+                        text = String.format(
+                            stringResource(R.string.temp),
+                            selectedWeather.minTemp
+                        ),
                         style = MaterialTheme.typography.h3,
                         color = MyTheme.colors.textColor.value,
                         modifier = Modifier.paddingFromBaseline(24.dp)
@@ -133,7 +148,10 @@ fun WeatherBottomSheetContent(selectedWeather: CurrentWeather) {
                         )
                     )
                     Text(
-                        text = String.format(stringResource(R.string.temp), selectedWeather.maxTemp),
+                        text = String.format(
+                            stringResource(R.string.temp),
+                            selectedWeather.maxTemp
+                        ),
                         style = MaterialTheme.typography.h3,
                         color = MyTheme.colors.textColor.value,
                         modifier = Modifier.paddingFromBaseline(24.dp)
