@@ -10,4 +10,12 @@
       the License.
       -->
     <string name="app_name">AndroidDevChallenge</string>
+    <string name="next_4_days_label">Next 4 days/hourly</string>
+    <string name="temp">%1$dᵒ</string>
+    <string name="humidity">Humidity %1$d%%</string>
+    <string name="wind_speed">Wind %1$d km/hr</string>
+    <string name="current_weather_label">Current Weather</string>
+
+    <string name="min_temp_a11y">Minimum temperature can be %1$d Degree</string>
+    <string name="max_temp_a11y">Maximum temperature can be %1$d Degree</string>
 </resources>

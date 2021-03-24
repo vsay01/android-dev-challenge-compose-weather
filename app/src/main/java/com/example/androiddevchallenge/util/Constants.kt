@@ -13,14 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.util
 
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Shapes
-import androidx.compose.ui.unit.dp
+object Constants {
+    val DAYS_OF_WEEK = arrayOf(
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+    )
 
-val shapes = Shapes(
-    small = RoundedCornerShape(4.dp),
-    medium = RoundedCornerShape(16.dp),
-    large = RoundedCornerShape(38.dp)
-)
+    val WEATHER_COLOR = arrayOf(
+        0xFF5f5be7,
+        0xFF55cc8c,
+        0xFFeb378e,
+        0xFFf4b13e
+    )
+}
