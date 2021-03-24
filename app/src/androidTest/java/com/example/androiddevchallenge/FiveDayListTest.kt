@@ -15,16 +15,10 @@
  */
 package com.example.androiddevchallenge
 
-import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
-import androidx.compose.ui.test.onNodeWithText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.androiddevchallenge.mock.getFiveDayWeather
-import com.example.androiddevchallenge.ui.component.FiveDayListItem
-import com.example.androiddevchallenge.ui.theme.MyTheme
-import com.example.androiddevchallenge.util.Constants
 import org.junit.Rule
-import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
