@@ -1,23 +1,50 @@
-# Put title of your app here
+# MiniWeather
 
 <!--- Replace <OWNER> with your Github Username and <REPOSITORY> with the name of your repository. -->
 <!--- You can find both of these in the url bar when you open your repository in github. -->
-![Workflow result](https://github.com/<OWNER>/<REPOSITORY>/workflows/Check/badge.svg)
+![Workflow result](https://github.com/vsay01/android-dev-challenge-compose-weather/workflows/Check/badge.svg)
 
 
 ## :scroll: Description
-<!--- Describe your app in one or two sentences -->
-
+MiniWeather is a week 4 challenge project that asked to create a one screen weather app. In this project, I use fake data.
 
 ## :bulb: Motivation and Context
-<!--- Optionally point readers to interesting parts of your submission. -->
-<!--- What are you especially proud of? -->
+In this challenge, it focus on:
+- Visual beauty
+- Novelty of idea
+- Code quality
+- Overall execution (including accessibility)
 
+[More detail about the challenge.]
+
+The main challenge that I faced is write unit test. There are not many resources available. 
 
 ## :camera_flash: Screenshots
-<!-- You can add more screenshots here if you like -->
-<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">
+<img src="/results/screenshot_1.png" width="260">&emsp;<img src="/results/screenshot_2.png" width="260">&emsp;<img src="/results/screenshot_4.png" width="260">
 
+
+Here is demo video:
+[demo_video]
+
+
+## :wheelchair: Accessibility
+For accessibility, I tested with google accessibility scanner to make sure no suggestions found.
+
+<img src="/results/screenshot_3.png" width="260">
+
+To make it easier for user to use talkback, I merged the contents wherever possible and provide custom content description.
+
+[accessibility video]
+
+## Testing Compose layout
+
+I wrote two basic compose layout test, CurrentWeatherCardTest and FiveDayListTest under androidTest package.
+
+## Credits
+
+This app inspired from [Weather App Freebie] concept Designed by [Raman Yv]
+
+Lottie file are downloaded from [Jochang]
 ## License
 ```
 Copyright 2020 The Android Open Source Project
@@ -34,3 +61,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+
+[Jochang]: https://lottiefiles.com/user/26177
+[accessibility video]: https://user-images.githubusercontent.com/6526127/112253453-bea70a80-8c2c-11eb-8665-e90686dda15e.mp4
+[demo_video]: https://user-images.githubusercontent.com/6526127/112253343-8b647b80-8c2c-11eb-9d3c-35c876d410b2.mp4
+[More detail about the challenge.]: https://android-developers.googleblog.com/2021/03/android-dev-challenge-4.html
